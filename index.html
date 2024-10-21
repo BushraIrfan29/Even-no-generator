@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Number Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border: 1px solid #2196F3;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Even Number Generator</h1>
+    <button onclick="generateEvenNumbers()">Generate Even Numbers</button>
+    <div id="output"></div>
+
+    <script>
+        function generateEvenNumbers() {
+            const limit = 20; // Change this limit to generate more or fewer even numbers
+            let evenNumbers = [];
+            
+            for (let i = 0; i <= limit; i++) {
+                if (i % 2 === 0) {
+                    evenNumbers.push(i);
+                }
+            }
+            
+            document.getElementById('output').innerText = "Even Numbers: " + evenNumbers.join(', ');
+        }
+    </script>
+
+</body>
+</html>
